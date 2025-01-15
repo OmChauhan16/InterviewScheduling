@@ -1,5 +1,5 @@
 // import TimeSlot from "../Models/timeSlot.js";
-import TimeSlot from "../models/TimeSlot.js";
+import TimeSlot from "../Models/TimeSlot.js";
 
 // Get all time slots
 export const getTimeSlots = async (req, res) => {
