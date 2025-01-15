@@ -1,0 +1,223 @@
+/* App.css */
+
+/* General styles */
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f3f4f6;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  color: #1a73e8;
+  margin-top: 20px;
+  font-size: 2.5rem;
+}
+
+.App {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Calendar container */
+.calendar-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.react-calendar {
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+}
+
+.react-calendar__tile--active {
+  background-color: #1a73e8;
+  color: white;
+  border-radius: 4px;
+}
+
+.react-calendar__tile--now {
+  background-color: #e8f0fe;
+  color: #1a73e8;
+}
+
+/* Time Slot Grid */
+.time-slot-container {
+  margin-top: 20px;
+}
+
+.time-slot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.time-slot {
+  padding: 10px;
+  background: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.time-slot:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.time-slot.active {
+  background: #1a73e8;
+  color: white;
+  font-weight: bold;
+  border-color: #1a73e8;
+}
+
+/* Form Styles */
+label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+input[type="text"], input[type="time"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button {
+  margin-top: 10px;
+  background-color: #1a73e8;
+  color: white;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #1558b0;
+}
+
+/* Footer text */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Ensure calendar dates are black */
+.react-calendar__tile {
+  color: black !important; /* Make all calendar dates black */
+  font-weight: 500; /* Slightly increase font weight for better readability */
+}
+
+.react-calendar__tile--now {
+  background-color: #e8f0fe !important; /* Keep current date highlighted */
+  color: black !important; /* Ensure current date text is also black */
+}
+
+.react-calendar__tile--active {
+  background-color: #1a73e8 !important; /* Highlight selected date */
+  color: white !important; /* Selected date text color */
+}
+
+/* General Calendar Styles */
+
+/* Set year and month header to black */
+.react-calendar__navigation {
+  color: black !important;
+  font-size: 1.2rem; /* Adjust font size for better visibility */
+  font-weight: bold;
+}
+
+/* Previous and Next buttons */
+.react-calendar__navigation__arrow {
+  color: black !important;
+}
+
+/* Remove default button background and add hover effect */
+.react-calendar__navigation__arrow:hover {
+  background-color: #e8e8e8; /* Subtle hover effect */
+  border-radius: 50%; /* Circular hover style */
+  cursor: pointer;
+}
+
+/* Make the year and month dropdown text black */
+.react-calendar__navigation__label {
+  color: black !important;
+}
+
+/* Active and disabled state improvements */
+.react-calendar__navigation button:disabled {
+  color: #ccc !important; /* Dimmed text for disabled buttons */
+}
+
+.react-calendar__navigation button:enabled:hover {
+  color: black !important;
+  background-color: #f0f0f0; /* Slight hover effect */
+}
+
+/* General tile and calendar improvements */
+.react-calendar__tile {
+  font-size: 1rem; /* Consistent font size */
+  text-align: center;
+  color: black !important; /* Ensure all tiles are black */
+}
+
+/* Centering the App */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure the content is vertically centered */
+  margin: 0;
+  padding: 0;
+  background-color: #f3f4f6; /* Optional background */
+}
+
+.App {
+  width: 100%;
+  max-width: 800px; /* Limit the app's width */
+  background: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+#select_time{
+  width: 250px;
+  margin-left: 40px;
+}
+
+#candidate_name{
+  width: 250px;
+  margin-left: 4px;
+}
+
+#title{
+  width: 250px;
+  margin-left: 96px;
+}
+
+#select_time-slot{
+  margin-left: 7px;
+}
