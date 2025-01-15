@@ -21,11 +21,13 @@ const App = () => {
     "3:00 PM - 4:00 PM",
   ];
 
+  const host = 'https://interviewschedulingbackend.onrender.com';
+
   // Fetch existing time slots from API
   useEffect(() => {
     const fetchTimeSlots = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/timeslots");
+        const response = await axios.get("${host}/api/timeslots");
         setTimeSlots(response.data);
       } catch (error) {
         console.error("Error fetching time slots:", error);
@@ -50,7 +52,7 @@ const App = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/timeslots",
+        "${host}/api/timeslots",
         newSlot
       );
       setTimeSlots([...timeSlots, response.data]);
@@ -72,7 +74,7 @@ const App = () => {
   // Delete a time slot
   const handleDeleteTimeSlot = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/timeslots/${id}`);
+      await axios.delete(`${host}/api/timeslots/${id}`);
       setTimeSlots(timeSlots.filter((slot) => slot._id !== id));
       alert("Time slot deleted successfully!");
     } catch (error) {
