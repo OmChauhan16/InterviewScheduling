@@ -27,7 +27,7 @@ const App = () => {
   useEffect(() => {
     const fetchTimeSlots = async () => {
       try {
-        const response = await axios.get("${host}/api/timeslots");
+        const response = await axios.get(`${host}/api/timeslots`);
         setTimeSlots(response.data);
       } catch (error) {
         console.error("Error fetching time slots:", error);
@@ -52,7 +52,7 @@ const App = () => {
 
     try {
       const response = await axios.post(
-        "${host}/api/timeslots",
+        `${host}/api/timeslots`,
         newSlot
       );
       setTimeSlots([...timeSlots, response.data]);
